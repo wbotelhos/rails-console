@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+abort('Run this from a Rails app root (bundle exec rails_console).') if !File.exist?('config/environment.rb')
+
+require File.expand_path('config/environment', Dir.pwd)
+
+RailsConsole::Broker.new.run

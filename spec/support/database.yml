@@ -1,0 +1,3 @@
+test:
+  adapter: sqlite3
+  database: tmp/rails_console_test.sqlite3

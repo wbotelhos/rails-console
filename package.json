@@ -1,0 +1,17 @@
+{
+  "name": "rails-console",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Frontend assets for the rails-console gem",
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:css": "cat node_modules/@xterm/xterm/css/xterm.css app/assets/rails_console/src/application.css > app/assets/rails_console/rails_console.css",
+    "build:js": "esbuild app/assets/rails_console/src/console.js --bundle --format=iife --minify --outfile=app/assets/rails_console/rails_console.js"
+  },
+  "devDependencies": {
+    "@rails/actioncable": "^8.0.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "esbuild": "^0.25.0"
+  }
+}

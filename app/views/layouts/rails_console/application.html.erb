@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Console</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+
+    <%= stylesheet_link_tag 'rails_console', nonce: true %>
+    <%= javascript_include_tag 'rails_console', nonce: true %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
